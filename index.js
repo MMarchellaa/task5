@@ -18,7 +18,6 @@ const range = document.querySelector('.inputErrorRange');
 const field = document.querySelector('.inputErrorNumber');
 const seed = document.querySelector('.inputSeedNumber');
 const main = document.querySelector('.main');
-// const tableToExport = document.getElementById('myTable');
 let table, header, idRow, randIdRow, fullnameRow, addressRow, telephoneRow;
 
 let createdrows = 0;
@@ -30,7 +29,7 @@ field.addEventListener('input', function (e) {
     range.value = e.target.value;
 });
 
-function randomizeSeed() {
+window.randomizeSeed = function() {
     seed.value = faker.datatype.number(false);
     changeTable();
 }
